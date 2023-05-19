@@ -4,7 +4,7 @@
 DefinitionBlock ("", "SSDT", 2, "ACDT", "MCHCSBUS", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
-    External (_SB_.PCI0.SBUS, DeviceObj)
+    External (_SB_.PCI0.SMBS, DeviceObj)
 
     Scope (_SB.PCI0)
     {
@@ -25,7 +25,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "MCHCSBUS", 0x00000000)
         }
     }
 
-    Device (_SB.PCI0.SBUS.BUS0)
+    Device (_SB.PCI0.SMBS.BUS0)
     {
         Name (_CID, "smbus")  // _CID: Compatible ID
         Name (_ADR, Zero)  // _ADR: Address
